@@ -16,24 +16,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (findViewById<EditText>(R.id.first_input) == null) {
+            findViewById<Button>(R.id.sum_button).setOnClickListener {
 
-        findViewById<Button>(R.id.sum_button).setOnClickListener {
-            sum()
-            answer(it)
-        }
+                sum()
+                answer(it)
+            }
 
-        findViewById<Button>(R.id.subtract_button).setOnClickListener {
-            sub()
-            answer(it)
-        }
+            findViewById<Button>(R.id.subtract_button).setOnClickListener {
+                sub()
+                answer(it)
+            }
 
-        findViewById<Button>(R.id.multiplication_button).setOnClickListener {
-            mul()
-            answer(it)
-        }
+            findViewById<Button>(R.id.multiplication_button).setOnClickListener {
+                mul()
+                answer(it)
+            }
 
-        findViewById<Button>(R.id.divide_button).setOnClickListener {
-            div()
+            findViewById<Button>(R.id.divide_button).setOnClickListener {
+                div()
+            }
         }
     }
 
